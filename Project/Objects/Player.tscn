@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bk0sfcrtjllo1"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_fmrkk"]
+[ext_resource type="Texture2D" uid="uid://cef7irhg4nnpv" path="res://Sprites/Icono Shakuhachi.png" id="2_pqlre"]
+[ext_resource type="PackedScene" uid="uid://cdr6v2un0ob30" path="res://Objects/dralako_model.tscn" id="2_ujd2f"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="3_jbhcr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mdojg"]
+radius = 0.476178
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_fmrkk")
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Idle" type="Control" parent="Interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Interface/Idle"]
+layout_mode = 0
+offset_left = 1610.0
+offset_top = 13.0
+offset_right = 2690.0
+offset_bottom = 1093.0
+scale = Vector2(0.270781, 0.272642)
+texture = ExtResource("2_pqlre")
+expand_mode = 2
+
+[node name="Player" type="CharacterBody3D" parent="."]
+collision_layer = 0
+script = ExtResource("3_jbhcr")
+
+[node name="Audio" type="AudioStreamPlayer" parent="Player"]
+
+[node name="CameraFront" type="Camera3D" parent="Player"]
+transform = Transform3D(-3.96809e-08, -0.41942, 0.907792, -1.83334e-08, 0.907792, 0.41942, -1, 4.79616e-14, -4.37114e-08, 3.00734, 1.24682, 0)
+
+[node name="Dralako" parent="Player" instance=ExtResource("2_ujd2f")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.1, -0.75, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107975, 0, 0)
+shape = SubResource("CapsuleShape3D_mdojg")
+
+[node name="CameraOrigin" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.565566, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player/CameraOrigin"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.865327, 0)
+spring_length = 2.0
+margin = 0.5
+
+[node name="CameraBehind" type="Camera3D" parent="Player/CameraOrigin/SpringArm3D"]
+transform = Transform3D(1, -1.54345e-08, -2.81563e-09, 1.54345e-08, 0.935586, 0.353099, -2.81563e-09, -0.353099, 0.935586, 0.00436805, -0.0024395, 2.18707)

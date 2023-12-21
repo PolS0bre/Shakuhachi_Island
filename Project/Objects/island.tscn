@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://oybpol7dpwhr"]
+
+[ext_resource type="PackedScene" uid="uid://bgtjx7sef0e8r" path="res://Models/Level/Island.glb" id="1_eb51f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jb1x0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5yrjf"]
+size = Vector3(5, 0.427307, 4.81299)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1cqhi"]
+size = Vector3(0.017334, 0.218384, 0.255127)
+
+[node name="Island" type="Node3D"]
+
+[node name="Body" parent="." instance=ExtResource("1_eb51f")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0.516541, -58.8356, -0.0818176)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_jb1x0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 2.48535, -4.86824, -2.02515)
+shape = SubResource("BoxShape3D_5yrjf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 55.0732, 31.6576, -2.56226)
+shape = SubResource("BoxShape3D_1cqhi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, -50.4442, 31.6576, -2.56226)
+shape = SubResource("BoxShape3D_1cqhi")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2.057, 0.00312942, -399.995, -0.0448611, 400, 0.00336623, 399.995, 0.0448782, -2.057, 2.04322, 31.6516, 50.1958)
+shape = SubResource("BoxShape3D_1cqhi")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2.057, 0.00312942, -399.995, -0.0448611, 400, 0.00336623, 399.995, 0.0448782, -2.057, 2.58584, 31.6635, -55.3203)
+shape = SubResource("BoxShape3D_1cqhi")

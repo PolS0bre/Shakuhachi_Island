@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuc51hnqabqwk"]
+
+[ext_resource type="PackedScene" uid="uid://btbpcrc70a4kd" path="res://Models/Level/temple.glb" id="1_apg54"]
+[ext_resource type="Texture2D" uid="uid://csq0djqehww7g" path="res://Models/Level/temple_Temple Material.png" id="2_kddnn"]
+[ext_resource type="Shader" uid="uid://bgehovgtjxanu" path="res://Shaders/outline.tres" id="3_7285j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f01bf"]
+render_priority = 0
+shader = ExtResource("3_7285j")
+shader_parameter/enable = true
+shader_parameter/outline_thickness = 0.05
+shader_parameter/color = Color(0, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82c3e"]
+next_pass = SubResource("ShaderMaterial_f01bf")
+albedo_texture = ExtResource("2_kddnn")
+
+[node name="temple" instance=ExtResource("1_apg54")]
+
+[node name="Temple" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_82c3e")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jp3we1kyqso"]
+
+[ext_resource type="PackedScene" uid="uid://cuc51hnqabqwk" path="res://Objects/temple_obj.tscn" id="1_3a4it"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_82gwp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8lbh2"]
+size = Vector3(9.78571, 10.1118, 9.94312)
+
+[node name="Temple" type="Node3D"]
+
+[node name="temple" parent="." instance=ExtResource("1_3a4it")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="temple"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_82gwp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="temple/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0314027, 5.03074, -0.0157485)
+shape = SubResource("BoxShape3D_8lbh2")

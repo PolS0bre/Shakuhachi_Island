@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwv6x6uk0brgs"
+path="res://.godot/imported/Requiem of Spirit.mp3-c8aea8374eb053f77d3524695e00b3a7.mp3str"
+
+[deps]
+
+source_file="res://Audio/Songs/Requiem of Spirit.mp3"
+dest_files=["res://.godot/imported/Requiem of Spirit.mp3-c8aea8374eb053f77d3524695e00b3a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3hyeyryj5qy2"]
+
+[ext_resource type="PackedScene" uid="uid://dbq2eoo30yqiv" path="res://Models/Shakuhachi.glb" id="1_b7tfj"]
+[ext_resource type="Shader" uid="uid://bgehovgtjxanu" path="res://Shaders/outline.tres" id="2_8nghg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lqao5"]
+render_priority = 0
+shader = ExtResource("2_8nghg")
+shader_parameter/enable = true
+shader_parameter/outline_thickness = 0.25
+shader_parameter/color = Color(0, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgm5n"]
+next_pass = SubResource("ShaderMaterial_lqao5")
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="Shakuhachi" instance=ExtResource("1_b7tfj")]
+
+[node name="Model" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_lgm5n")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdr6v2un0ob30"]
+
+[ext_resource type="PackedScene" uid="uid://d3hxwqk6v13lp" path="res://Models/Dralako.glb" id="1_o2odt"]
+[ext_resource type="Texture2D" uid="uid://b2jknkqjc5hmc" path="res://Models/Dralako_Dralako Material.png" id="2_532yw"]
+[ext_resource type="Shader" uid="uid://bgehovgtjxanu" path="res://Shaders/outline.tres" id="3_t2u35"]
+[ext_resource type="AnimationLibrary" uid="uid://cv5hq1nuruajn" path="res://Animations/animation_base.res" id="4_p78tf"]
+[ext_resource type="PackedScene" uid="uid://c3hyeyryj5qy2" path="res://Objects/shakuhachi.tscn" id="5_dlrmp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p6k1c"]
+render_priority = 0
+shader = ExtResource("3_t2u35")
+shader_parameter/enable = true
+shader_parameter/outline_thickness = 0.05
+shader_parameter/color = Color(0, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgoa7"]
+next_pass = SubResource("ShaderMaterial_p6k1c")
+albedo_texture = ExtResource("2_532yw")
+
+[node name="Dralako" instance=ExtResource("1_o2odt")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, 0.224145, 0)
+bones/0/rotation = Quaternion(-2.98023e-08, 1.19209e-07, -2.52435e-29, 1)
+bones/2/rotation = Quaternion(0.860274, -3.38279e-09, -0.202755, -0.467781)
+bones/3/rotation = Quaternion(0.881562, 3.33226e-08, -0.0430667, 0.470099)
+
+[node name="Body" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cgoa7")
+
+[node name="Shakuhachi2" parent="Armature/Skeleton3D" index="1" instance=ExtResource("5_dlrmp")]
+transform = Transform3D(-0.20862, 3.09229e-10, -1.84618e-08, -1.47776e-08, 0.122267, 0.169036, 1.10706e-08, 0.169035, -0.122267, -1.34792, 2.62321, -0.30215)
+
+[node name="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": ExtResource("4_p78tf")
+}

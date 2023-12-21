@@ -1,0 +1,225 @@
+[gd_scene load_steps=33 format=3 uid="uid://bgs06n616l7xv"]
+
+[ext_resource type="PackedScene" uid="uid://bk0sfcrtjllo1" path="res://Objects/Player.tscn" id="1_mmyc4"]
+[ext_resource type="PackedScene" uid="uid://oybpol7dpwhr" path="res://Objects/island.tscn" id="2_kf7ui"]
+[ext_resource type="PackedScene" uid="uid://5jp3we1kyqso" path="res://Objects/temple.tscn" id="3_4syf6"]
+[ext_resource type="Texture2D" uid="uid://deaqndb3nr1w4" path="res://Sprites/Songs/Zeldas_Lullaby.png" id="4_0bxiq"]
+[ext_resource type="Texture2D" uid="uid://cr6v8i4w3gv14" path="res://Sprites/Songs/Suns_Song.png" id="4_d4nxv"]
+[ext_resource type="PackedScene" uid="uid://b0vkwtejcccjx" path="res://Objects/tree.tscn" id="4_kjvut"]
+[ext_resource type="Texture2D" uid="uid://c1j8r7hhrtnps" path="res://Sprites/Songs/Song_of_Time.png" id="5_hkdqt"]
+[ext_resource type="Texture2D" uid="uid://hm1tf83td0jo" path="res://Sprites/Songs/Song_of_Storms.png" id="6_u576m"]
+[ext_resource type="Texture2D" uid="uid://dpsqw3x2p72de" path="res://Sprites/Songs/Serenade_of_Water.png" id="7_katck"]
+[ext_resource type="Texture2D" uid="uid://djwqnu5q1gdlq" path="res://Sprites/Songs/Sarias_Song.png" id="8_22ro1"]
+[ext_resource type="Texture2D" uid="uid://cgotwd8nvat7j" path="res://Sprites/Songs/Requiem_of_Spirit.png" id="9_1acc5"]
+[ext_resource type="Texture2D" uid="uid://cnqgbdt4ft8o4" path="res://Sprites/Songs/Prelude_of_Light.png" id="10_ts4pe"]
+[ext_resource type="Texture2D" uid="uid://bgin4cqoriimw" path="res://Sprites/Songs/Nocturne_of_Shadow.png" id="11_ysl2q"]
+[ext_resource type="Texture2D" uid="uid://jkal4dt2n2cn" path="res://Sprites/Songs/Minuet_of_Forest.png" id="12_sekmp"]
+[ext_resource type="Texture2D" uid="uid://c8f5oed070ecy" path="res://Sprites/Songs/Eponas_Song.png" id="13_rbwfw"]
+[ext_resource type="Texture2D" uid="uid://h7tqc1srfnov" path="res://Sprites/Songs/Bolero_of_Fire.png" id="15_ixt22"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xuswe"]
+sky_top_color = Color(0.290196, 0.6, 0.701961, 1)
+sky_horizon_color = Color(0.290196, 0.6, 0.701961, 1)
+sky_curve = 0.106066
+ground_bottom_color = Color(0.905882, 0.588235, 0.552941, 1)
+ground_horizon_color = Color(0.290196, 0.6, 0.701961, 1)
+ground_curve = 0.177532
+sun_curve = 0.27991
+
+[sub_resource type="Sky" id="Sky_x05a8"]
+sky_material = SubResource("ProceduralSkyMaterial_xuswe")
+
+[sub_resource type="Environment" id="Environment_jwusn"]
+background_mode = 2
+sky = SubResource("Sky_x05a8")
+ambient_light_source = 3
+ambient_light_color = Color(0.980392, 0.980392, 0.980392, 1)
+tonemap_exposure = 1.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kiqhp"]
+albedo_texture = ExtResource("4_0bxiq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_if78v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4gic"]
+albedo_texture = ExtResource("4_d4nxv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26qfl"]
+albedo_texture = ExtResource("5_hkdqt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t5jxu"]
+albedo_texture = ExtResource("6_u576m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co0fk"]
+albedo_texture = ExtResource("7_katck")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3ped"]
+albedo_texture = ExtResource("8_22ro1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opxqr"]
+albedo_texture = ExtResource("9_1acc5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibq6m"]
+albedo_texture = ExtResource("10_ts4pe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6hpt"]
+albedo_texture = ExtResource("11_ysl2q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7crw0"]
+albedo_texture = ExtResource("12_sekmp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vshfm"]
+albedo_texture = ExtResource("13_rbwfw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vo8r3"]
+albedo_texture = ExtResource("15_ixt22")
+
+[node name="Level" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_mmyc4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.387, 1.02859, -0.00348425)
+
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jwusn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.602957, 0.781647, 0.159598, 0.241686, -0.369626, 0.897198, 0.760284, -0.502399, -0.411781, 7, 0, 0)
+light_color = Color(0.827451, 0.678431, 0.843137, 1)
+light_energy = 0.546
+shadow_enabled = true
+shadow_bias = 7.475
+shadow_normal_bias = 4.1
+shadow_transmittance_bias = 16.0
+shadow_opacity = 0.0
+shadow_blur = 8.455
+
+[node name="Island" parent="." instance=ExtResource("2_kf7ui")]
+
+[node name="Temple" parent="." instance=ExtResource("3_4syf6")]
+transform = Transform3D(-0.00671946, 0, -0.999977, 0, 1, 0, 0.999977, 0, -0.00671946, 0, 0, 0)
+
+[node name="Songs" type="Node3D" parent="."]
+
+[node name="Zelda\'s Lullaby" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(-1.55359e-07, 1.35196, 0, 1.55359e-07, 2.58318e-15, -1.35196, -3.55419, -5.90962e-08, -5.90962e-08, 5.30189, 4.96906, -0.283529)
+material_override = SubResource("StandardMaterial3D_kiqhp")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Sun\'s Song" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(-3.42169, 0.365705, -5.68931e-08, 1.55359e-07, 2.58318e-15, -1.35196, -0.961407, -1.30156, -1.59855e-08, 11.6566, 4.96906, -20.3367)
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Song of Time" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(-2.67702, 0.286117, -4.45114e-08, 1.21548e-07, 2.021e-15, -1.05773, -0.752175, -1.0183, -1.25066e-08, -2.85771, 4.09394, 46.043)
+material_override = SubResource("StandardMaterial3D_26qfl")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Song of Storms" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(0.238872, -1.05382, 3.97176e-09, 1.21548e-07, 2.021e-15, -1.05773, 2.77041, 0.0908634, 4.60641e-08, -27.7585, 4.09394, 12.5871)
+material_override = SubResource("StandardMaterial3D_t5jxu")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Serenade of Water" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(0.238872, -1.05382, 3.97176e-09, 1.21548e-07, 2.021e-15, -1.05773, 2.77041, 0.0908634, 4.60641e-08, -5.75853, 4.09394, -0.412925)
+material_override = SubResource("StandardMaterial3D_co0fk")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Saria\'s Song" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(3.32942, -1.052, 5.53588e-08, 1.89193e-07, 3.14575e-15, -1.6464, 2.76561, 1.26646, 4.59843e-08, -2.65353, 5.37872, -43.3055)
+material_override = SubResource("StandardMaterial3D_e3ped")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Requiem of Spirit" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(2.9384, 1.20885, 4.88573e-08, 1.89193e-07, 3.14575e-15, -1.6464, -3.17796, 1.11772, -5.28405e-08, 38.032, 5.37872, -45.4997)
+material_override = SubResource("StandardMaterial3D_opxqr")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Prelude of Light" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(1.97641, -0.931216, 3.28622e-08, 1.3753e-07, -2.30172e-16, -1.19681, 2.44808, 0.751799, 4.07048e-08, 40.3831, 3.69224, 13.3397)
+material_override = SubResource("StandardMaterial3D_ibq6m")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Nocturne of Shadow" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(-4.79594, -0.807546, -7.9743e-08, 2.29258e-07, -3.14114e-15, -1.99505, 2.12297, -1.82431, 3.52989e-08, 34.3801, 4.92684, 41.1119)
+material_override = SubResource("StandardMaterial3D_i6hpt")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Minuet of Forest" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(-5.24459, 0.0182106, -8.72028e-08, 2.29258e-07, -1.50578e-15, -1.99505, -0.0478743, -1.99497, -7.96029e-10, -0.347512, 6.41938, -5.5948)
+material_override = SubResource("StandardMaterial3D_7crw0")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Epona\'s Song" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(5.24459, -0.0183151, 8.72028e-08, 2.29258e-07, -1.50578e-15, -1.99505, 0.048149, 1.99497, 8.00595e-10, -0.347512, 6.41938, 5.36663)
+material_override = SubResource("StandardMaterial3D_vshfm")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Bolero of Fire" type="MeshInstance3D" parent="Songs"]
+transform = Transform3D(3.21312, -0.0112208, 5.34251e-08, 1.40456e-07, -9.22521e-16, -1.22228, 0.0294987, 1.22222, 4.90488e-10, -34.5167, 2.53707, -42.5276)
+material_override = SubResource("StandardMaterial3D_vo8r3")
+mesh = SubResource("PlaneMesh_if78v")
+surface_material_override/0 = SubResource("StandardMaterial3D_v4gic")
+
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="tree" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 34.6561, 0, 43.2672)
+
+[node name="tree16" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.9422, 0, 29.9034)
+
+[node name="tree17" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(1.14374, 0, 2.77342, 0, 3, 0, -2.77342, 0, 1.14374, 11.273, -3.8147e-06, -19.068)
+
+[node name="tree5" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -1.18384, 0, -44.5399)
+
+[node name="tree6" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 36.4792, 0, -47.2942)
+
+[node name="tree7" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(1.55869, 0, 2.56329, 0, 3, 0, -2.56329, 0, 1.55869, -48.5067, 0, -9.15005)
+
+[node name="tree2" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 36.365, 0, -28.0592)
+
+[node name="tree8" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.6885, -1.90735e-06, 21.2509)
+
+[node name="tree9" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.03941, -1.90735e-06, 46.8559)
+
+[node name="tree10" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -26.7246, -1.90735e-06, 13.1267)
+
+[node name="tree11" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -45.4391, -1.90735e-06, 31.4019)
+
+[node name="tree12" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24.2078, -1.90735e-06, -21.3638)
+
+[node name="tree13" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 41.3772, -1.90735e-06, 12.818)
+
+[node name="tree14" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 15.8824, -1.90735e-06, -35.7674)
+
+[node name="tree15" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 42.778, -1.90735e-06, -9.74113)
+
+[node name="tree3" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -34.8719, 0, -43.5463)
+
+[node name="tree4" parent="Trees" instance=ExtResource("4_kjvut")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -23.484, 0, 32.056)

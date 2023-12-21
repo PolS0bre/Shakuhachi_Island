@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dhtmrijp7llgf"]
+
+[ext_resource type="FontFile" uid="uid://c6nrg28f4500o" path="res://Fonts/Mocha_ver1.0.otf" id="1_x2en4"]
+
+[resource]
+font = ExtResource("1_x2en4")
+font_size = 60
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)

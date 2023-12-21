@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ibt6kcvua1oa"
+path="res://.godot/imported/Minuet of Forest.mp3-485379c4b4b0aa8e58fab8d83e43f472.mp3str"
+
+[deps]
+
+source_file="res://Audio/Songs/Minuet of Forest.mp3"
+dest_files=["res://.godot/imported/Minuet of Forest.mp3-485379c4b4b0aa8e58fab8d83e43f472.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

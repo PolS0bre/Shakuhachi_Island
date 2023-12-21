@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0vkwtejcccjx"]
+
+[ext_resource type="PackedScene" uid="uid://ch407h5wbfmd" path="res://Models/Level/tree.glb" id="1_nc4ig"]
+[ext_resource type="Texture2D" uid="uid://ci8m2f6umj2va" path="res://Models/Level/tree_Tree Material.png" id="2_pklty"]
+[ext_resource type="Shader" uid="uid://bgehovgtjxanu" path="res://Shaders/outline.tres" id="3_yo26a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_myrpp"]
+render_priority = 0
+shader = ExtResource("3_yo26a")
+shader_parameter/enable = true
+shader_parameter/outline_thickness = 0.05
+shader_parameter/color = Color(0, 0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5cw7g"]
+next_pass = SubResource("ShaderMaterial_myrpp")
+albedo_texture = ExtResource("2_pklty")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gkgn0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0oysg"]
+size = Vector3(1, 2.79675, 1)
+
+[node name="tree" instance=ExtResource("1_nc4ig")]
+
+[node name="Tree" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5cw7g")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree" index="0"]
+transform = Transform3D(1.17633, 0, 0, 0, 1.39199, 0, 0, 0, 0.893474, 0, -5.60073, -0.460108)
+physics_material_override = SubResource("PhysicsMaterial_gkgn0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.39386, 0)
+shape = SubResource("BoxShape3D_0oysg")

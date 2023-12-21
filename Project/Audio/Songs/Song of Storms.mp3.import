@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyrninlx7uk00"
+path="res://.godot/imported/Song of Storms.mp3-6e5fbd196f796c422dd4c26633f78657.mp3str"
+
+[deps]
+
+source_file="res://Audio/Songs/Song of Storms.mp3"
+dest_files=["res://.godot/imported/Song of Storms.mp3-6e5fbd196f796c422dd4c26633f78657.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

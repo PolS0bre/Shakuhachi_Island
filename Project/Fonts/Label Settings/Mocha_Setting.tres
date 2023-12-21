@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cj0g1k4ugeg61"]
+
+[ext_resource type="FontFile" uid="uid://c6nrg28f4500o" path="res://Fonts/Mocha_ver1.0.otf" id="1_ilqus"]
+
+[resource]
+font = ExtResource("1_ilqus")
+font_size = 50

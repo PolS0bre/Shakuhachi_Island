@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgc1ejjcg1us7"]
+
+[ext_resource type="Texture2D" uid="uid://cms4mgmeysjfq" path="res://Sprites/Partitura.png" id="1_y1wm7"]
+[ext_resource type="Texture2D" uid="uid://croxtcfs83m7s" path="res://Sprites/Notas/Button_Q.png" id="2_uowdi"]
+[ext_resource type="Texture2D" uid="uid://dbirli1yxvvvy" path="res://Sprites/Notas/Button_W.png" id="3_4dyr3"]
+[ext_resource type="Texture2D" uid="uid://cevgyh5d38pyj" path="res://Sprites/Notas/Button_E.png" id="4_xouj1"]
+[ext_resource type="LabelSettings" uid="uid://cj0g1k4ugeg61" path="res://Fonts/Label Settings/Mocha_Setting.tres" id="5_h68r7"]
+[ext_resource type="LabelSettings" uid="uid://dhtmrijp7llgf" path="res://Fonts/Label Settings/Mocha_SettingColor.tres" id="6_cq5lt"]
+
+[node name="Song of Time" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Partitura" type="Sprite2D" parent="."]
+position = Vector2(953, 764)
+scale = Vector2(0.822699, 0.776756)
+texture = ExtResource("1_y1wm7")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(700, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_xouj1")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(810, 835)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_uowdi")
+
+[node name="Button4" type="Sprite2D" parent="."]
+position = Vector2(920, 815)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_4dyr3")
+
+[node name="Button1" type="Sprite2D" parent="."]
+position = Vector2(1030, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_xouj1")
+
+[node name="Button5" type="Sprite2D" parent="."]
+position = Vector2(1140, 835)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_uowdi")
+
+[node name="Button6" type="Sprite2D" parent="."]
+position = Vector2(1250, 815)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_4dyr3")
+
+[node name="First Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 565.0
+offset_right = 866.0
+offset_bottom = 613.0
+text = "YOU PLAYED"
+label_settings = ExtResource("5_h68r7")
+
+[node name="Second Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 557.0
+offset_right = 1566.0
+offset_bottom = 613.0
+text = "SONG OF TIME"
+label_settings = ExtResource("6_cq5lt")

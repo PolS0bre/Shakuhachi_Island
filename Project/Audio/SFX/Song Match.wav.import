@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt8pigkcgh8tx"
+path="res://.godot/imported/Song Match.wav-fb092ddcfafa5634a031d65602c7bcaf.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Song Match.wav"
+dest_files=["res://.godot/imported/Song Match.wav-fb092ddcfafa5634a031d65602c7bcaf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

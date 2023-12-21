@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvorvtu3ox8di"]
+
+[ext_resource type="Texture2D" uid="uid://cms4mgmeysjfq" path="res://Sprites/Partitura.png" id="1_vf7go"]
+[ext_resource type="Texture2D" uid="uid://bt1akwtkus1vr" path="res://Sprites/Notas/Button_T.png" id="3_c34gc"]
+[ext_resource type="Texture2D" uid="uid://c56kicauaujkr" path="res://Sprites/Notas/Button_R.png" id="4_qfabx"]
+[ext_resource type="Texture2D" uid="uid://cevgyh5d38pyj" path="res://Sprites/Notas/Button_E.png" id="5_ixlfv"]
+[ext_resource type="LabelSettings" uid="uid://cj0g1k4ugeg61" path="res://Fonts/Label Settings/Mocha_Setting.tres" id="6_o7dvw"]
+[ext_resource type="LabelSettings" uid="uid://dhtmrijp7llgf" path="res://Fonts/Label Settings/Mocha_SettingColor.tres" id="7_v15ew"]
+
+[node name="Epona\'s Song" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Partitura" type="Sprite2D" parent="."]
+position = Vector2(953, 764)
+scale = Vector2(0.822699, 0.776756)
+texture = ExtResource("1_vf7go")
+
+[node name="Button1" type="Sprite2D" parent="."]
+position = Vector2(1030, 715)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_c34gc")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(700, 715)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_c34gc")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(810, 735)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_qfabx")
+
+[node name="Button4" type="Sprite2D" parent="."]
+position = Vector2(920, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ixlfv")
+
+[node name="Button5" type="Sprite2D" parent="."]
+position = Vector2(1140, 735)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_qfabx")
+
+[node name="Button6" type="Sprite2D" parent="."]
+position = Vector2(1250, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_ixlfv")
+
+[node name="First Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 571.0
+offset_right = 888.0
+offset_bottom = 619.0
+text = "YOU PLAYED"
+label_settings = ExtResource("6_o7dvw")
+
+[node name="Second Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 563.0
+offset_right = 1551.0
+offset_bottom = 619.0
+text = "EPONA'S SONG"
+label_settings = ExtResource("7_v15ew")

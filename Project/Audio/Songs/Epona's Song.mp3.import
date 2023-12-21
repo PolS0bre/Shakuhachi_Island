@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b41e7c0odtty6"
+path="res://.godot/imported/Epona's Song.mp3-a8d7981fde37e59e8ff94a2f62c7789d.mp3str"
+
+[deps]
+
+source_file="res://Audio/Songs/Epona's Song.mp3"
+dest_files=["res://.godot/imported/Epona's Song.mp3-a8d7981fde37e59e8ff94a2f62c7789d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

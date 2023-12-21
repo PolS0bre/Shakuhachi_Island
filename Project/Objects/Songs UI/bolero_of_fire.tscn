@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://bix2c2lxbep1y"]
+
+[ext_resource type="Texture2D" uid="uid://bki7kgt70glor" path="res://Sprites/Partitura.png" id="1_wqi2v"]
+[ext_resource type="Texture2D" uid="uid://173422ipvgvc" path="res://Sprites/Notas/Button_W.png" id="2_eaa67"]
+[ext_resource type="Texture2D" uid="uid://bnr8hir6m6fl2" path="res://Sprites/Notas/Button_Q.png" id="3_p5i73"]
+[ext_resource type="Texture2D" uid="uid://du22jlt4mby2l" path="res://Sprites/Notas/Button_E.png" id="4_fybhu"]
+[ext_resource type="LabelSettings" uid="uid://cj0g1k4ugeg61" path="res://Fonts/Label Settings/Mocha_Setting.tres" id="5_yhdb7"]
+[ext_resource type="LabelSettings" uid="uid://dhtmrijp7llgf" path="res://Fonts/Label Settings/Mocha_SettingColor.tres" id="6_j0oty"]
+
+[node name="Bolero of Fire" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Partitura" type="Sprite2D" parent="."]
+position = Vector2(953, 764)
+scale = Vector2(0.822699, 0.776756)
+texture = ExtResource("1_wqi2v")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(675, 815)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("2_eaa67")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(775, 835)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("3_p5i73")
+
+[node name="Button4" type="Sprite2D" parent="."]
+position = Vector2(875, 815)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("2_eaa67")
+
+[node name="Button1" type="Sprite2D" parent="."]
+position = Vector2(975, 835)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("3_p5i73")
+
+[node name="Button5" type="Sprite2D" parent="."]
+position = Vector2(1075, 775)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("4_fybhu")
+
+[node name="Button6" type="Sprite2D" parent="."]
+position = Vector2(1175, 815)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("2_eaa67")
+
+[node name="Button7" type="Sprite2D" parent="."]
+position = Vector2(1275, 775)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("4_fybhu")
+
+[node name="Button8" type="Sprite2D" parent="."]
+position = Vector2(1375, 815)
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("2_eaa67")
+
+[node name="First Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 568.0
+offset_right = 831.0
+offset_bottom = 616.0
+text = "YOU PLAYED"
+label_settings = ExtResource("5_yhdb7")
+
+[node name="Second Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 560.0
+offset_right = 1494.0
+offset_bottom = 616.0
+text = "BOLERO OF FIRE"
+label_settings = ExtResource("6_j0oty")

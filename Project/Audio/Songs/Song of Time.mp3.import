@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bax6sda088wy7"
+path="res://.godot/imported/Song of Time.mp3-96a68dee18b5022c5fe76b1b349d1a83.mp3str"
+
+[deps]
+
+source_file="res://Audio/Songs/Song of Time.mp3"
+dest_files=["res://.godot/imported/Song of Time.mp3-96a68dee18b5022c5fe76b1b349d1a83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

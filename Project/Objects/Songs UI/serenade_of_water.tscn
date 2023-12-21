@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwxwbdbanl6b3"]
+
+[ext_resource type="Texture2D" uid="uid://cms4mgmeysjfq" path="res://Sprites/Partitura.png" id="1_ma5ro"]
+[ext_resource type="Texture2D" uid="uid://dbirli1yxvvvy" path="res://Sprites/Notas/Button_W.png" id="2_3rnls"]
+[ext_resource type="Texture2D" uid="uid://croxtcfs83m7s" path="res://Sprites/Notas/Button_Q.png" id="2_g0fod"]
+[ext_resource type="Texture2D" uid="uid://cevgyh5d38pyj" path="res://Sprites/Notas/Button_E.png" id="3_8k0e0"]
+[ext_resource type="Texture2D" uid="uid://c56kicauaujkr" path="res://Sprites/Notas/Button_R.png" id="4_0drlc"]
+[ext_resource type="LabelSettings" uid="uid://cj0g1k4ugeg61" path="res://Fonts/Label Settings/Mocha_Setting.tres" id="5_avvek"]
+[ext_resource type="LabelSettings" uid="uid://dhtmrijp7llgf" path="res://Fonts/Label Settings/Mocha_SettingColor.tres" id="6_wxk5m"]
+
+[node name="Serenade of Water" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Partitura" type="Sprite2D" parent="."]
+position = Vector2(953, 764)
+scale = Vector2(0.822699, 0.776756)
+texture = ExtResource("1_ma5ro")
+
+[node name="Button1" type="Sprite2D" parent="."]
+position = Vector2(700, 835)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_g0fod")
+
+[node name="Button2" type="Sprite2D" parent="."]
+position = Vector2(810, 815)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_3rnls")
+
+[node name="Button3" type="Sprite2D" parent="."]
+position = Vector2(920, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_8k0e0")
+
+[node name="Button4" type="Sprite2D" parent="."]
+position = Vector2(1030, 775)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_8k0e0")
+
+[node name="Button5" type="Sprite2D" parent="."]
+position = Vector2(1140, 735)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_0drlc")
+
+[node name="First Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 569.0
+offset_right = 747.0
+offset_bottom = 617.0
+text = "YOU PLAYED"
+label_settings = ExtResource("5_avvek")
+
+[node name="Second Part" type="Label" parent="."]
+layout_mode = 0
+offset_left = 766.0
+offset_top = 561.0
+offset_right = 1465.0
+offset_bottom = 617.0
+text = "SERENADE OF WATER"
+label_settings = ExtResource("6_wxk5m")
